@@ -7,20 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music Is Fun!</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css'>
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
     <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
         <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
         <div class="form-group">
-            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-            <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+            <div class="col-1">
+                <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                <button type="submit" class="w3-button w3-border w3-hover-black" id="get-music-button">Get
+                    Music</button>
+            </div>
         </div>
     </form>
-    <div id="songs">
+    <ul id="song-list">
 
+    </ul>
+    <div class="container-fluid">
+        <div class="row justify-content-center" id="songs">
+
+        </div>
     </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="module" src="app/main.js"></script>
 </body>

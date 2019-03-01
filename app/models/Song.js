@@ -7,5 +7,6 @@ export default class Song {
         this.album = song.album || song.collectionName
         this.price = song.price || song.collectionPrice
         this.preview = song.preview || song.previewUrl
+        this.trackId = song.trackId
     }
 }
