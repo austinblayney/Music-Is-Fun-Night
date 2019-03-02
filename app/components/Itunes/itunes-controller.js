@@ -30,11 +30,8 @@ function drawSongs() {
 }
 
 function drawPlaylist(playlist) {
-  //builds up a template of song cards from your playlist and sets the template equal to an element on the DOM
-}
-
-function drawDetails(Song) {
-  let template = `
+  function drawDetails(Song) {
+    let template = `
         <div class="col-2 border border-dark rounded m-1">
             <h3>${Song.name}</h3>
             <img src="${Song.albumArt["front_default"]}" alt="" srcset="">
@@ -45,10 +42,14 @@ function drawDetails(Song) {
                     <p>track: ${Song.trackId}</p>
             <button class="btn btn-outline-info btn-light" onclick="app.controllers.itunesCtrl.addToPlaylist()">Add to my Playlist</button>
         </div>
-    `
+    ` //builds up a template of song cards from your playlist and sets the template equal to an element on the DOM
+    document.querySelector("#song-list").innerHTML = template;
+  }
 
 
-  document.querySelector("#song-list").innerHTML = template;
+
+
+
 }
 
 
