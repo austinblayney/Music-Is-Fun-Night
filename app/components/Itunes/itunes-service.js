@@ -37,7 +37,6 @@ class ItunesService {
       .then(res => {
         console.log(res)
         this.drawPlaylistCB(res.data.data)
-        callback(res.data)
       })
       .catch(e => console.error(e))
   }

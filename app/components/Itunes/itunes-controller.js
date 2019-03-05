@@ -11,7 +11,7 @@ function drawSongs() {
 
   let template = ''
   itunesService.Songs.forEach(song => {
-    template += `<div class=" col-3 card text-white bg-dark mb-3" app.controllers.itunesController.getMusicByArtist>
+    template += `<div class=" card text-white bg-dark mb-3 col-4" app.controllers.itunesController.getMusicByArtist>
       <h1>${song.title}</h1>
       <img src="${song.albumArt}" />
       <h1>${song.artist}<h1>
@@ -20,13 +20,15 @@ function drawSongs() {
      </audio>
        <button type="submit" class="w3-button w3-border w3-hover-black" onclick="app.controllers.itunesCtrl.addToPlaylist('${song.trackId}')">Add To Playlist</button>
     </div > `
+
+    document.querySelector("#songs").innerHTML = template;
   })
   // < button type = "submit" class="w3-button w3-border w3-hover-black" > Remove From Playlist</button >
 
 
 
 
-  document.querySelector("#songs").innerHTML = template;
+
 }
 
 function drawPlaylist(playlist) {
@@ -43,7 +45,7 @@ function drawPlaylist(playlist) {
             <button class="btn btn-outline-info btn-light" onclick="app.controllers.itunesCtrl.addToPlaylist()">Add to my Playlist</button>
         </div>
     ` //builds up a template of song cards from your playlist and sets the template equal to an element on the DOM
-    document.querySelector("#song-list").innerHTML = template;
+    document.querySelector("#song-list").innerHTML = template
   }
 
 
