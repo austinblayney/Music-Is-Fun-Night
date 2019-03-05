@@ -5,6 +5,7 @@ let _songs = []
 let _playlist = []
 let _selectedSong = {}
 
+// @ts-ignore
 let _songApi = axios.create({
   baseURL: "https://bcw-sandbox.herokuapp.com/api/austin/songs",
   timeout: 3000
@@ -35,7 +36,8 @@ class ItunesService {
     _songApi.get('/')
       .then(res => {
         console.log(res)
-        this.drawPlaylistCB(/* add the playlist here. example res.data.data */)
+        this.drawPlaylistCB(res.data.data)
+        callback(res.data)
       })
       .catch(e => console.error(e))
   }
