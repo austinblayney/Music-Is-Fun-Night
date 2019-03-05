@@ -29,8 +29,11 @@ function drawSongs() {
 
 
 
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> 6db74c6f89e38c76aeeb25a3bfceae62dd7216d4
 function drawPlaylist(playlist) {
   function drawDetails(Song) {
     let template = `
@@ -45,7 +48,11 @@ function drawPlaylist(playlist) {
             <button class="btn btn-outline-info btn-light" onclick="app.controllers.itunesCtrl.addToPlaylist()">Add to my Playlist</button>
         </div>
     ` //builds up a template of song cards from your playlist and sets the template equal to an element on the DOM
+<<<<<<< HEAD
     document.querySelector("#song-list").innerHTML = template
+=======
+    document.querySelector("#song-list").innerHTML = template;
+>>>>>>> 6db74c6f89e38c76aeeb25a3bfceae62dd7216d4
   }
 
 

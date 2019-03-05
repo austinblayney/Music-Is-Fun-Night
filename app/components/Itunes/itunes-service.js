@@ -37,6 +37,10 @@ class ItunesService {
       .then(res => {
         console.log(res)
         this.drawPlaylistCB(res.data.data)
+<<<<<<< HEAD
+=======
+        callback(res.data)
+>>>>>>> 6db74c6f89e38c76aeeb25a3bfceae62dd7216d4
       })
       .catch(e => console.error(e))
   }
